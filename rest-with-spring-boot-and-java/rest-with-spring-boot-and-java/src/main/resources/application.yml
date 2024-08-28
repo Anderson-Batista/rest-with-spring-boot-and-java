@@ -8,5 +8,5 @@ spring:
     open-in-view: false
     #database-platform: org.hibernate.dialect.MySQLDialect
     hibernate:
-      ddl-auto: update
+      ddl-auto: none
     show-sql: false
