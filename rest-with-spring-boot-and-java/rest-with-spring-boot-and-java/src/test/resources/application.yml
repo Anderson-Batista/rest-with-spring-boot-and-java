@@ -1,13 +1,16 @@
 server:
-port: 8888
+  port: 8080
+cors:
+  originPatterns: http://localhost:3000,http://localhost:8080,https://erudio.com.br
 spring:
   datasource:
-    driverClassName: com.mysql.cj.jdbc.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
-    open-in-view: false
-    #database-platform: org.hibernate.dialect.MySQLDialect
     hibernate:
-      ddl-auto: none
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
     show-sql: false
 springdoc:
   pathsToMatch: /api/**/v1/**
